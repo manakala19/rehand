@@ -49,6 +49,9 @@
                             <tbody>
                                 <tr>
                                     @foreach ($data as $i)
+                                    <td>
+                                        {{ $i->name }}
+                                    </td>
                                         <td>
                                             <img style="max-width: 100px;max-height:100px"
                                                 src="{{ url('foto') . '/' . $i->foto }}">
@@ -75,7 +78,7 @@
                                 @endforeach
                             </tbody>
                         </table>
-                        {{ $data->links() }}
+                        {{-- {{ $data->links() }} --}}
                     </div>
                 </div>
             </div>
@@ -135,7 +138,7 @@
                 "responsive": true,
                 "lengthChange": false,
                 "autoWidth": false,
-                "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+                // "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
         }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
         $('#example2').DataTable({
         "paging": true,

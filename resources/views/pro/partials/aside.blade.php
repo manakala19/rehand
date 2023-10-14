@@ -52,8 +52,8 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="/last">
-                                    <i class="pe-2 fas fa-history icon-clock mr-3"></i>Last Updates
+                                <a href="/info">
+                                    <i class="pe-2 fas fa-history icon-clock mr-3"></i>Info Updates
                                 </a>
                             </li>
                         </ul>

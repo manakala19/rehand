@@ -38,6 +38,9 @@ class ProduksiController extends Controller
      */
     public function store(Request $request)
     {
+
+
+        // dd(Auth::user()->nik);
         Session::flash('so', $request->so);
         Session::flash('brand', $request->brand);
         Session::flash('artikel', $request->artikel);
@@ -67,7 +70,9 @@ class ProduksiController extends Controller
             'artikel' => $request->input('artikel'),
             'total' => $request->input('total'),
             'output' => $request->input('output'),
-            'foto' => $foto_name
+            'user_id' => Auth::user()->nik,
+            'foto' => $foto_name,
+            
         ];
         produksi::create($data);
         return redirect('data')->with('success', 'Input Data Successfully');

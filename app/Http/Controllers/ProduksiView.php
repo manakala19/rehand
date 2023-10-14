@@ -36,8 +36,11 @@ class ProduksiView extends Controller
         return redirect('/login')->with('success', 'Password Changed');
     }
 
-    public function last(){
-        $user = user::all();
-        return view('pro.pages.last', ['user' => $user])
+    public function last(User $user){
+        $user = Auth::user();
+        $data = produksi::orderBy('so', 'asc')->join('users', 'users.nik', '=', 'produksi.user_id')->paginate();
+        return view('pro.pages.last', compact('user'), [
+            'title' => 'Info Updates'
+        ])->with('data', $data);
     }
 }

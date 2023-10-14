@@ -31,7 +31,7 @@
                     @include('component.message')
                     <div class="card-header">
                         <h2 class="ms-3 py-3 text-dark">Data Produksi</h2>
-                        <a class="btn btn-success" href="{{ '/data/' . $user->nik . '/create' }}">Tambah</a>
+                        <a class="btn btn-success" href="/data/create">Tambah</a>
                     </div>
                     <div class="container-lg">
                         <table border="1" id="example1" class="table border">

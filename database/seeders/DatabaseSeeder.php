@@ -15,11 +15,11 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         DB::table('users')->insert([
-            'name' => 'reza',
-            'NIK' => '123124',
-            'role' => 'admin',
-            'email' => 'reza@gmail.com',
-            'password' => Hash::make('123456'),
+            'name' => 'a',
+            'NIK' => '123123',
+            'role' => 'operator',
+            'email' => 'a@gmail.com',
+            'password' => Hash::make('123123'),
             'foto' => '123123.jpg',
         ]);
     }

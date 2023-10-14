@@ -11,6 +11,6 @@ class produksi extends Model
     protected $table = "produksi";
 
     protected $primaryKey = 'so';
-    protected $fillable = ['so','brand','artikel','total','output','foto'];
+    protected $fillable = ['so','brand','artikel','total','output','foto','user_id'];
 }
 

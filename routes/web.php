@@ -42,6 +42,6 @@ Route::group(['middleware' => ['auth', 'cekLevel:operator']], function(){
     Route::get('/register', [SessionController::class, 'register']);
     Route::post('/register/create', [SessionController::class, 'create']);
     Route::resource('admin', AdminController::class);
-    Route::get('last', [PRoduksiView::class, 'last']);
+    Route::get('/info', [ProduksiView::class, 'last'])->name('last');
 });
 
